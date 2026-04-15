@@ -3,20 +3,20 @@ const mongoose =require('mongoose')
 const userSchema = mongoose.Schema({
 
     username:{
-        name:String,
+        type:String,
         required:true
     },
     email:{
         type:String,
-        required:true,
-        unique:true
+        required: true,
+        unique: true
     },
     password:{
         type:String,
-        required:true
+        required: true
     }
 },{
-    timestamp:true
+    timestamp: true
 })
 const userModel = mongoose.model("users",userSchema)
 
